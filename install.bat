@@ -31,14 +31,14 @@ if '%errorlevel%' NEQ '0' (
 set "RESPONSE="
 
 mode con cols=80 lines=9
-title Choose a response.
+title Choose a response:
 
 goto 'input'
 
 : 'input'
-echo [1] Turn off forced auto-update on Spotify
-echo [2] Reenable auto-update on Spotify
-echo [3] Install Old-UI Spotify (and turn off forced updates)
+echo [1] Disable updates on Spotify
+echo [2] Re-enable updates on Spotify
+echo [3] Install old UI Spotify (and turn off updates)
 echo [4] Exit
 echo.
 echo Note: Does not work on Spotify client installed through the Microsoft Store.
@@ -51,6 +51,7 @@ if /I %response%==4 goto 'end'
 goto 'input'
 
 : 'forcenoupdate'
+title Updates disabled
 echo y | del %localappdata%\Spotify\Update
 mkdir %localappdata%\Spotify\Update
 icacls %localappdata%\Spotify\Update /deny "%username%":D
@@ -62,6 +63,7 @@ pause
 goto 'input'
 
 : 'allowupdate'
+title Updates re-enabled
 icacls %localappdata%\Spotify\Update /reset /T
 cls
 echo Done.
