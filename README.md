@@ -9,7 +9,7 @@ SHA256 | ee2957008b72e044738bcbd4816fe32698ee361b9462556bad5354768707873a
 If you want to use your own installer, download a older installer and replace `spotify.exe` with it.
 
 ## Usage
-1. Download Repo as a ZIP
+1. Download repo as a ZIP
 2. Extract
 3. Run `install.bat`
 4. Follow prompts
