@@ -1,4 +1,4 @@
-# Spotify Old UI Installer (and disable auto update)
+# Spotify Update Disabler (and old UI installer)
 Batch file to automate reinstalling the old Spotify client and removing updates.
 
 
